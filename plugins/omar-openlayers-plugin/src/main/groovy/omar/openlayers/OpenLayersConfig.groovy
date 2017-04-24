@@ -8,6 +8,7 @@ import groovy.transform.ToString
 /**
  * Created by sbortman on 12/24/16.
  */
+@EnableConfigurationProperties
 @ConfigurationProperties(prefix="omar.openlayers",ignoreInvalidFields=true,merge=false)
 @ToString(includeNames=true)
 class OpenLayersConfig
