@@ -8,7 +8,7 @@ import groovy.transform.ToString
 /**
  * Created by sbortman on 12/24/16.
  */
-@ConfigurationProperties(prefix="omar.openlayers", merge=false)
+@ConfigurationProperties(prefix="omar.openlayers", ignoreInvalidFields=true, merge=false)
 @ToString(includeNames=true)
 class OpenLayersConfig
 {
@@ -25,7 +25,7 @@ class OpenLayersConfig
     HashMap<String,String> params = new HashMap<String,String>()
     HashMap<String,Object> options = new HashMap<String,String>()
   }
-
+g
   @ConfigurationPropertiesBinding
   static class OpenLayersLayerConverter implements Converter<Map<String, String>, OpenLayersLayer>
   {
