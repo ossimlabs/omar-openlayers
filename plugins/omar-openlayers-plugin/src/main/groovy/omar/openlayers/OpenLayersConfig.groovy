@@ -12,8 +12,8 @@ import groovy.transform.ToString
 @ToString(includeNames=true)
 class OpenLayersConfig
 {
-  Set<OpenLayersLayer> baseMaps
-  Set<OpenLayersLayer> overlayLayers
+  Set<OpenLayersLayer> baseMaps = new Set<OpenLayersLayer>();
+  Set<OpenLayersLayer> overlayLayers = new Set<OpenLayersLayer();
 
   @ToString(includeNames=true)
   static class OpenLayersLayer {
