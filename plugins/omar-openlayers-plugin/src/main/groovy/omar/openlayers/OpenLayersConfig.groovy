@@ -23,7 +23,7 @@ class OpenLayersConfig
     HashMap<String,String> params
     HashMap<String,Object> options
   }
-g
+
   @ConfigurationPropertiesBinding
   static class OpenLayersLayerConverter implements Converter<Map<String, String>, OpenLayersLayer>
   {
