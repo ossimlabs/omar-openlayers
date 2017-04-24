@@ -12,16 +12,18 @@ import groovy.transform.ToString
 @ToString(includeNames=true)
 class OpenLayersConfig
 {
-  Set<OpenLayersLayer> baseMaps;
-  Set<OpenLayersLayer> overlayLayers
+//  Set<OpenLayersLayer> baseMaps;
+//  Set<OpenLayersLayer> overlayLayers
+  ArrayList<OpenLayersLayer> baseMaps = new ArrayList<OpenLayersLayer>()
+  ArrayList<OpenLayersLayer> overlayLayers = new ArrayList<OpenLayersLayer>()
 
   @ToString(includeNames=true)
   static class OpenLayersLayer {
     String layerType
     String title
     String url
-    HashMap<String,String> params
-    HashMap<String,Object> options
+    HashMap<String,String> params = new HashMap<String,String>()
+    HashMap<String,Object> options = new HashMap<String,String>()
   }
 
   @ConfigurationPropertiesBinding
