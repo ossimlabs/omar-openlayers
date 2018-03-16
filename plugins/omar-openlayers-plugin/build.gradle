@@ -8,11 +8,13 @@ buildscript {
     apply from: System.env.OMAR_COMMON_PROPERTIES
   }
   repositories {
-    mavenLocal()
     if ( ! System.getenv('O2_DEV_HOME') ) {
       maven { url "${ossimMavenProxy}" }
     }
-    maven { url "https://repo.grails.org/grails/core" }
+    if( Boolean.parseBoolean( System.env.WWW_CONNECTED ) ) {
+        mavenLocal()
+        maven { url "https://repo.grails.org/grails/core" }
+    }
   }
   dependencies {
     classpath "org.grails:grails-gradle-plugin:$grailsVersion"
@@ -43,11 +45,13 @@ ext {
 }
 
 repositories {
-  mavenLocal()
   if ( ! System.getenv('O2_DEV_HOME') ) {
     maven { url "${ossimMavenProxy}" }
   }
-  maven { url "https://repo.grails.org/grails/core" }
+  if( Boolean.parseBoolean( System.env.WWW_CONNECTED ) ) {
+    mavenLocal()
+    maven { url "https://repo.grails.org/grails/core" }
+  }
 }
 
 dependencyManagement {
