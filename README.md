@@ -26,5 +26,5 @@ Only required for Jenkins pipelines or if you are running Artifactory and/or Ope
 3. Install omar-openlayers-plugin
 ```
  cd omar-openlayers/plugins/omar-openlayers-plugin
- ./gradlew clean install
+ gradle clean install
 ```
