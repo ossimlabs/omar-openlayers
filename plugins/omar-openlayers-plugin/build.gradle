@@ -62,7 +62,8 @@ dependencyManagement {
 }
 
 dependencies {
-  compile "org.webjars:openlayers:3.20.1"
+  
+  compile 'org.webjars:openlayers:4.5.0'
 
   compile "org.springframework.boot:spring-boot-starter-logging"
   compile "org.springframework.boot:spring-boot-autoconfigure"
