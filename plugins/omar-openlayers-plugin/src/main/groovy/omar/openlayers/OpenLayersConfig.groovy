@@ -15,6 +15,7 @@ class OpenLayersConfig
 {
   List<OpenLayersLayer> baseMaps;
   List<OpenLayersLayer> overlayLayers
+  Integer zoomFilterChangeLevel
 
   @ToString(includeNames=true)
   static class OpenLayersLayer {
