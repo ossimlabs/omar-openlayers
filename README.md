@@ -1,6 +1,6 @@
 # omar-openlayers
 
-[![Build Status](https://jenkins.radiantbluecloud.com/buildStatus/icon?job=omar-openlayers-dev)]()
+[![Build Status](https://jenkins.ossim.io/buildStatus/icon?job=omar-openlayers-dev)]()
 
 ### Required environment variable
 - OMAR_COMMON_PROPERTIES
