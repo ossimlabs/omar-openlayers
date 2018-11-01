@@ -55,7 +55,7 @@ Brief summary/description of the plugin.
 
         {->
           openLayersConfig( OpenLayersConfig )
-          openLayersLayerConverter( OpenLayersConfig.OpenLayersLayerConverter )        \
+          openLayersLayerConverter( OpenLayersConfig.OpenLayersLayerConverter )        
         }
     }
 
