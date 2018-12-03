@@ -28,3 +28,5 @@ Only required for Jenkins pipelines or if you are running Nexus and/or Openshift
  cd omar-openlayers/plugins/omar-openlayers-plugin
  gradle clean install
 ```
+
+...
