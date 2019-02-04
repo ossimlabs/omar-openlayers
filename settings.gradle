@@ -4,11 +4,7 @@ pluginManagement {
     gradlePluginPortal()
   }
 }
-def final O2_DEV_HOME = System.getenv('O2_DEV_HOME')
 
-if ( O2_DEV_HOME ) {
+include 'omar-openlayers-plugin'
 
-   include 'omar-openlayers-plugin'
-
-   project(':omar-openlayers-plugin').projectDir = "${O2_DEV_HOME}/omar-openlayers/plugins/omar-openlayers-plugin" as File
-}
+project(':omar-openlayers-plugin').projectDir = "${rootProject.projectDir}/plugins/omar-openlayers-plugin" as File
