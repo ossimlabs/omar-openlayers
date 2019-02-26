@@ -6,7 +6,7 @@ buildscript {
   dependencies {
     classpath "org.grails:grails-gradle-plugin:$grailsVersion"
     classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.14.10"
-    classpath 'io.ossim:gradleDefaults:1.5-SNAPSHOT'
+    classpath 'io.ossim:gradleDefaults:1.6-SNAPSHOT'
   }
 }
 
@@ -82,6 +82,30 @@ dependencies {
 
 bootRepackage.enabled = false
 
+assemble.dependsOn.add('assetCompile')
+
 assets {
   packagePlugin = true
+  minifyJs = false
+  minifyCss = false
+  excludes = [
+    //"**/application.js",
+    "**/i18n/**",
+    "**/jquery*",
+    "**/omar/**",
+    "**/webjars/**",
+    "**/*-debug.js",
+    "**/*-deps.js",
+    "**/*-openlayers*",
+    "**/*.gz",
+    "**/*.html",
+    "**/*.txt",
+  ]
+  includes = [
+    "**/fonts/**",
+    "**/webjars/**/bootstrap.min.css",
+    "**/webjars/**/ol.css",
+    "**/webjars/**/ol.js",
+  ]
 }
+
