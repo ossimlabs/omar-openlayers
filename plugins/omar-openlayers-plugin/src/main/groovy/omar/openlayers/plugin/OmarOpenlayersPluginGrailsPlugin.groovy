@@ -1,21 +1,19 @@
-package omar.openlayers
+package omar.openlayers.plugin
 
+import omar.openlayers.OpenLayersConfig
 import grails.plugins.*
-import groovy.util.logging.Slf4j
-import grails.util.Environment
 
-@Slf4j
-class OmarOpenlayersGrailsPlugin extends Plugin {
+class OmarOpenlayersPluginGrailsPlugin extends Plugin {
 
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "3.1.10 > *"
+    def grailsVersion = "3.3.10 > *"
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
         "grails-app/views/error.gsp"
     ]
 
     // TODO Fill in these fields
-    def title = "Omar Openlayers" // Headline display name of the plugin
+    def title = "Omar Openlayers Plugin" // Headline display name of the plugin
     def author = "Your name"
     def authorEmail = ""
     def description = '''\
@@ -24,7 +22,7 @@ Brief summary/description of the plugin.
     def profiles = ['web']
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/omar-openlayers"
+    def documentation = "http://grails.org/plugin/omar-openlayers-plugin"
 
     // Extra (optional) plugin metadata
 
@@ -43,18 +41,8 @@ Brief summary/description of the plugin.
     // Online location of the plugin's browseable source code.
 //    def scm = [ url: "http://svn.codehaus.org/grails-plugins/" ]
 
-    Closure doWithSpring() {
-        // log.trace("doWithSpring(): Entered.............")
-        // OmarOpenlayersReflectionUtils.application = OmarOpenlayersUtils.application = grailsApplication
-        //
-        // OmarOpenlayersUtils.resetOpenlayersConfig()
-        // // force reload by getting the config object
-        // OmarOpenlayersUtils.openlayersConfig
-        //
-        // log.trace("doWithSpring(): Leaving.............")
-
-        {->
-          openLayersConfig( OpenLayersConfig )
+    Closure doWithSpring() { {->
+         openLayersConfig( OpenLayersConfig )
           openLayersLayerConverter( OpenLayersConfig.OpenLayersLayerConverter )        
         }
     }
