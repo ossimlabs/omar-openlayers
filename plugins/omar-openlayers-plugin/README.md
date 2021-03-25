@@ -1,4 +1,4 @@
-#omar-openlayers-plugin
+# omar-openlayers-plugin
 
 This plugin is used by the following services:
 
