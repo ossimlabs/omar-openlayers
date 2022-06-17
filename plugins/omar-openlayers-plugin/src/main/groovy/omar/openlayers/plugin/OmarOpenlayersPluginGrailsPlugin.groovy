@@ -1,12 +1,11 @@
 package omar.openlayers.plugin
 
-import omar.openlayers.OpenLayersConfig
 import grails.plugins.*
 
 class OmarOpenlayersPluginGrailsPlugin extends Plugin {
 
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "3.3.10 > *"
+    def grailsVersion = "5.1.8 > *"
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
         "grails-app/views/error.gsp"
@@ -42,8 +41,7 @@ Brief summary/description of the plugin.
 //    def scm = [ url: "http://svn.codehaus.org/grails-plugins/" ]
 
     Closure doWithSpring() { {->
-         openLayersConfig( OpenLayersConfig )
-          openLayersLayerConverter( OpenLayersConfig.OpenLayersLayerConverter )        
+            // TODO Implement runtime spring config (optional)
         }
     }
 
