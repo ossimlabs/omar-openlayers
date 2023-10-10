@@ -1,2 +1,2 @@
-//= require webjars/openlayers/4.5.0/ol.js
+//= require webjars/openlayers/4.6.5/ol.js
 //= require_self

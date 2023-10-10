@@ -1,17 +1,22 @@
-if ( System.getenv('O2_INLINE_BUILD') ) {
-    grails {
-        plugins {
-            if ( System.getenv('O2_INLINE_BUILD') ) {
-            //    compile project(":omar-core-plugin")
-            }
-        }
-    }
+plugins {
+  id 'java-library'
 }
-dependencies {
-    //compile project( ":${ rootProject.name }-lib" )
-    if ( ! System.getenv('O2_INLINE_BUILD') ) {
-    // compile "io.ossim.omar.plugins:omar-core-plugin:+"
-    }
 
-  compile 'org.webjars:openlayers:4.5.0'
+dependencies {
+  implementation "org.webjars:openlayers:${openlayersVersion}"
+}
+
+assets {
+   packagePlugin = true
+
+  excludes = [
+    '*'
+  ]   
+
+  includes = [
+    '**/omar-openlayers.js',
+    '**/omar-openlayers.css',
+    '**/ol.js',        
+    '**/ol.css'        
+  ]
 }
